@@ -15,7 +15,7 @@ function App() {
 
         try {
             //send a topic to backend
-            const res = await axios.post("http://localhost:5000/api/generate",{prompt});
+            const res = await axios.post("https://ai-chat-backend-cdzh.onrender.com/api/generate",{prompt});
             //update state with slides data(mock AI Output)
             setSlides(res.data.slides);
         }catch(error){
